@@ -1,0 +1,406 @@
+/* Base styles (light mode by default) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f2ef;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #0077b5;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.header-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.profile h2 {
+    margin: 10px 0 5px 0;
+}
+
+.profile p {
+    color: gray;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-footer {
+    margin-top: 10px;
+}
+
+.post-footer button {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.post-footer button:hover {
+    background-color: #005582;
+}
+.sidebar .post.dark-mode{
+    background-color: #121212;
+    color: #140505;
+}
+
+/* Dark mode styles */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #180808;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+    color: #1b1010;
+}
+
+header.dark-mode input[type="text"] {
+    background-color: #333;
+    color: #130a0a;
+}
+
+.sidebar.dark-mode {
+    background-color: #1e1e1e;
+    color: #170b0b;
+}
+
+.content.dark-mode {
+    background-color: #121212;
+    color: #170f0f;
+}
+
+.profile h2.post.dark-mode{
+    color: black
+}
+
+
+/* Additional CSS for profile management */
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    cursor: pointer;
+}
+
+#upload-picture {
+    display: none;
+}
+
+.profile h2, .profile p {
+    margin: 10px 0 5px 0;
+}
+
+.profile .experience {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.profile .experience h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#experience-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#experience-list li {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: text;
+}
+
+#add-experience {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#add-experience:hover {
+    background-color: #005582;
+}
+
+
+/* Add these styles for editing and deleting buttons */
+
+.post-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-footer .left-actions {
+    display: flex;
+}
+
+.post-footer .right-actions {
+    display: flex;
+}
+
+.post-footer button {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.post-footer button:hover {
+    background-color: #005582;
+}
+
+/* For delete and edit buttons */
+.post-footer .right-actions button {
+    background-color: #d9534f;
+}
+
+.post-footer .right-actions button:hover {
+    background-color: #c9302c;
+}
+
+/* Edit input field styling */
+.edit-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.edit-input.hidden {
+    display: none;
+}
+
+
+
+/* Shared styles */
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    cursor: pointer;
+}
+
+.profile h2, .profile p {
+    margin: 10px 0 5px 0;
+}
+
+.profile .experience {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.profile .experience h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#experience-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#experience-list li {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: text;
+}
+
+#experience-list li.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#add-experience {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#add-experience:hover {
+    background-color: #005582;
+}
+
+.post {
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.post.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+textarea.edit-input {
+    width: 100%;
+    height: 80px;
+    display: block;
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+textarea.edit-input.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+.comment-input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.comment-input.dark-mode {
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #555;
+}
+
+/* General button styles */
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,16 @@
+-- Table: public.Alumni_members
+
+-- DROP TABLE IF EXISTS public."Alumni_members";
+
+CREATE TABLE IF NOT EXISTS public."Alumni_members"
+(
+    "Name" character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    "Year" integer NOT NULL,
+    "Email" character varying COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Alumni_members_pkey" PRIMARY KEY ("Email")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Alumni_members"
+    OWNER to postgres;

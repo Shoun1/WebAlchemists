@@ -1,0 +1,18 @@
+-- Table: public.Qualification
+
+-- DROP TABLE IF EXISTS public."Qualification";
+
+CREATE TABLE IF NOT EXISTS public."Qualification"
+(
+    id integer NOT NULL GENERATED ALWAYS AS IDENTITY ( INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 2147483647 CACHE 1 ),
+    email character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    "Department" character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    "Field" character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    "Achievement" text COLLATE pg_catalog."default",
+    CONSTRAINT email UNIQUE (email)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Qualification"
+    OWNER to postgres;

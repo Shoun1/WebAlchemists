@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Recruitment & Mentorship</title>
+    <link rel="stylesheet" href="alumnijobpost.css">
+</head>
+<body>
+    <header>
+        <h1>Job Recruitment Portal</h1>
+    </header>
+
+    <main>
+        <section class="job-form">
+            <h2>Post a Job</h2>
+            <form id="jobPostForm">
+                <label for="job-title">Job Title:</label>
+                <input type="text" id="job-title" required><br>
+
+                <label for="job-description">Job Description:</label>
+                <textarea id="job-description" required></textarea><br>
+
+                <label for="job-location">Location:</label>
+                <input type="text" id="job-location" required><br>
+
+                <button type="submit">Post Job</button>
+            </form>
+            <h3>Posted Jobs:</h3>
+            <ul id="job-list"></ul>
+        </section>
+
+        <aside class="mentor-choice">
+            <h2>Mentor Sign-Up</h2>
+            <form id="mentorForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required><br>
+
+                <label for="role">Are you a Faculty or Alumni?</label>
+                <select id="role" required>
+                    <option value="Faculty">Faculty</option>
+                    <option value="Alumni">Alumni</option>
+                </select><br>
+
+                <label for="event">Would you like to mentor for an upcoming event?</label>
+                <input type="checkbox" id="event"><br>
+
+                <button type="submit">Submit</button>
+            </form>
+            <h3>Mentors:</h3>
+            <ul id="mentor-list"></ul>
+        </aside>
+    </main>
+
+    <script src="alumnijobpost.js"></script>
+</body>
+</html>

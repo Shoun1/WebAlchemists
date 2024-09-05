@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Search and Filter</title>
+    <link rel="stylesheet" href="alumnidirectory.css">
+</head>
+<body>
+    <header>
+        <h1>Alumni Directory</h1>
+    </header>
+
+    <main>
+        <section class="search-filter">
+            <h2>Search Alumni</h2>
+            <input type="text" id="search-input" placeholder="Search by name...">
+
+            <div class="filters">
+                <label for="department-filter">Filter by Department:</label>
+                <select id="department-filter">
+                    <option value="All">All Departments</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Electrical Engineering">Electrical Engineering</option>
+                    <option value="Mechanical Engineering">Mechanical Engineering</option>
+                    <option value="Civil Engineering">Civil Engineering</option>
+                </select>
+
+                <label for="year-filter">Filter by Year:</label>
+                <select id="year-filter">
+                    <option value="All">All Years</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+
+                <button id="reset-btn">Reset Filters</button>
+            </div>
+        </section>
+
+        <section class="alumni-list">
+            <h3>Alumni List:</h3>
+            <ul id="alumni-list">
+                <!-- Alumni data will be dynamically displayed here -->
+            </ul>
+        </section>
+    </main>
+
+    <script src="alumnidirectory.js"></script>
+</body>
+</html>

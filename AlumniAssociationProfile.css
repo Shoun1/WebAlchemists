@@ -1,0 +1,325 @@
+/* Base styles (light mode by default) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f2ef;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-image: url(HomePageback.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.header-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header input[type="text"] {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+    max-width: 100%;
+}
+
+.header-icons {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.main-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 100%;
+    max-width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.profile h2 {
+    margin: 10px 0 5px 0;
+}
+
+.profile p {
+    color: gray;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #0077b5;
+    font-weight: bold;
+}
+
+.content {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.post-header img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-footer .left-actions,
+.post-footer .right-actions {
+    display: flex;
+}
+
+.post-footer button {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.post-footer button:hover {
+    background-color: #005582;
+}
+
+/* For delete and edit buttons */
+.post-footer .right-actions button {
+    background-color: #d9534f;
+}
+
+.post-footer .right-actions button:hover {
+    background-color: #c9302c;
+}
+
+/* Edit input field styling */
+.edit-input {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.edit-input.hidden {
+    display: none;
+}
+
+/* Dark mode styles */
+
+body.dark-mode {
+    background-image: url(HomePageback.jpg);
+    color: #180808;
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+
+header.dark-mode {
+    background-color: #1e1e1e;
+    color: #1b1010;
+}
+
+header.dark-mode input[type="text"] {
+    background-color: #333;
+    color: #130a0a;
+}
+
+.sidebar.dark-mode {
+    background-color: #1e1e1e;
+    color: #170b0b;
+}
+
+.content.dark-mode {
+    background-color: #121212;
+    color: #170f0f;
+}
+
+/* Shared styles */
+
+.profile img {
+    border-radius: 50%;
+    width: 150px;
+    cursor: pointer;
+}
+
+.profile h2,
+.profile p {
+    margin: 10px 0 5px 0;
+}
+
+.profile .experience {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.profile .experience h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+#experience-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#experience-list li {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: text;
+}
+
+#experience-list li.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#add-experience {
+    background-color: #0077b5;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#add-experience:hover {
+    background-color: #005582;
+}
+
+/* General button styles */
+
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .post {
+        padding: 15px;
+    }
+
+    .post-footer {
+        flex-direction: column;
+    }
+
+    .post-footer button {
+        margin-bottom: 10px;
+    }
+
+    .header-container {
+        flex-direction: column;
+    }
+
+    header input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-icons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+    header {
+        filter: blur(3px); 
+
+    .header-icons a {
+        margin: 0 5px;
+    }
+
+    .sidebar {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .post {
+        padding: 10px;
+    }
+}

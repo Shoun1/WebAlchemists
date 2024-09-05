@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="AlumniAssociationProfile.css">
+</head>
+<body class="light-mode">
+    <header>
+        <div class="header-container">
+            <h1>Alumni relation</h1>
+            <input type="text" placeholder="Search...">
+            <div class="header-icons">
+                <a href="HOMEAFTERSIGNIN.HTML">Home</a>
+                <a href="#">My Network</a>
+                <a href="#">Jobs</a>
+                <a href="contacts.html">Messaging</a>
+                <a href="#">Notifications</a>
+                <a href="#">Me</a>
+            </div>
+            <div class="theme-switch">
+                <input type="checkbox" id="theme-toggle">Change theme
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="profile">
+                <img id="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
+                <input type="file" id="upload-picture" accept="image/*">
+                <h2 contenteditable="true">John Doe</h2>
+                <p contenteditable="true">Software Engineer</p>
+                <div class="experience">
+                    <h3>Experience</h3>
+                    <ul id="experience-list">
+                        <li contenteditable="true">Currently working at XYZ Corp.</li>
+                    </ul>
+                    <button id="add-experience">Add Experience</button>
+                </div>
+                <div class="experience">
+                    <h3>Education</h3>
+                    <ul id="experience-list">
+                        <li contenteditable="true">studied at..</li>
+                    </ul>
+                    <button id="add-experience">Add Education</button>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="content">
+            <!-- Posts will be dynamically rendered here -->
+        </section>
+    </div>
+
+    <script src="AlumniAssociationProfile.js"></script>
+</body>
+</html>

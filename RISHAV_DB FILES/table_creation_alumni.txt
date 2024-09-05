@@ -1,0 +1,92 @@
+CREATE TABLE alumni_members (
+    Name VARCHAR(100) NOT NULL,           -- Name of the alumni (text, required)
+    Year INT NOT NULL,                    -- Year of graduation (integer, required)
+    Email VARCHAR(150) PRIMARY KEY        -- Email as primary key (text, unique, required)
+);
+
+select *from alumni_members;
+
+-- Create the Qualification table
+CREATE TABLE Qualification (
+    Email VARCHAR(150),                   -- Email is a foreign key, referenced from alumni_members
+    Department VARCHAR(100) NOT NULL,     -- Department of the qualification (text, required)
+    Field VARCHAR(100) NOT NULL,          -- Field of study or work (text, required)
+    Achievement TEXT,                     -- Description of achievements (text, optional)
+    
+    -- Define Email as a foreign key that references the alumni_members table's email
+    CONSTRAINT fk_email
+        FOREIGN KEY (Email)
+        REFERENCES alumni_members (Email)
+        ON DELETE CASCADE -- Delete the qualification if the alumni is deleted
+);
+
+select *from Qualification;
+
+INSERT INTO alumni_members (Name, Year, Email)
+VALUES
+    ('Abhinaba Das',2012,'abhinaba.das@gmail.com'),
+    ('Akash Dey',2011,'akash.dey@gmail.com'),
+    ('Arun Kumar',2018,'arun.kumar@gmail.com');
+
+select *from alumni_members;
+
+INSERT INTO alumni_members (Name, Year, Email)
+VALUES
+    ('Abhinaba Das',2012,'abhinaba.das@gmail.com'),
+    ('Akash Dey',2011,'akash.dey@gmail.com'),
+    ('Arun Kumar',2018,'arun.kumar@gmail.com');
+
+select *from alumni_members;
+
+INSERT INTO alumni_members (Name, Year, Email)
+VALUES
+    ('Ayan Halder',2017,'ayan.halder@gmail.com'),
+    ('Indrani Sarkar',2016,'indrani.sarkar@gmail.com'),
+    ('Navanil Ray',2013,'navanil.ray@gmail.com'),
+    ('Pritam Joardar',2017,'pritam.joardar@gmail.com'),
+    ('Raktim Paul',2016,'raktim.paul@gmail.com'),
+    ('Saroj Paul',2015,'saroj.paul@gmail.com'),
+    ('Souvick Saha',2010,'souvick.saha@gmail.com'),
+    ('Suman Pasi',2014,'suman.pasi@gmail.com'),
+    ('Tanushree Dhali',2014,'tanushree.dhali@gmail.com');
+    
+select *from alumni_members;
+    
+    
+
+INSERT INTO Qualification (Email, Department, Field, Achievement)
+VALUES
+    ('souvick.saha@gmail.com', 'Computer Science', 'Software Engineering', 'Developed AI software'),
+    ('abhinaba.das@gmail.com', 'Electrical Engineering', 'Power Systems', 'Published 3 research papers'),
+    ('saroj.paul@gmail.com', 'Mechanical Engineering', 'Robotics', 'Designed robotic arm');
+select *from Qualification;
+
+
+INSERT INTO Qualification (Email, Department, Field, Achievement)
+VALUES
+    ('suman.pasi@gmail.com', 'Data Science', 'Programmer Analytic', 'Designed market fund app'),
+    ('indrani.sarkar@gmail.com', 'Electrical Electronics Engineering', 'Manufacturing System', 'Designed Advanced Electronic Equipment'),
+    ('navanil.ray@gmail.com', 'Electronics Communication Engineering', 'Digital Electronics', 'Developing Low Power IOT Devices'),
+    ('pritam.joardar@gmail.com', 'Electronics Communication Engineering', 'Wireless Communication Network', 'Published Research Paper'),
+    
+select *from Qualification;
+
+INSERT INTO Qualification (Email, Department, Field, Achievement)
+VALUES
+    ('akash.dey@gmail.com', 'Computer Science', 'Graphics Designer', 'Creating a Graphic Rendering Engine'),
+    ('tanushree.dhali@gmail.com', 'Information Technology', 'Database Management Systems', 'Managing Organizational Data'),
+    ('ayan.haldar@gmail.com', 'Information Technology', 'Cybersecurity', 'Published Research Paper on Secure Software Development'),
+    ('arun.kumar@gmail.com', 'Electronics Communication Engineering', 'Robotics', 'Designed Autonomous Robots');
+    ('raktim.paul@gmail.com', 'Civil Engineering', 'Geotechnical Engineering', 'Successful Infrastructure Projects');
+ select *from Qualification;
+
+ 
+CREATE TABLE personal (
+    ID SERIAL PRIMARY KEY,        -- Auto-incrementing primary key (unique identifier)
+    Photos BYTEA,                 -- Binary data type for storing photos (Binary Large Object)
+    Updates TEXT NOT NULL,        -- Text for storing updates (required)
+    News TEXT NOT NULL            -- Text for storing news (required)
+);
+select *from personal;
+
+

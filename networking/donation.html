@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Donation Portal</title>
+    <link rel="stylesheet" href="donation.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Alumni Donation Portal</h1>
+        <form class="donation-form">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+
+            <label for="amount">Donation Amount</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter donation amount" required>
+
+            <label for="cause">Select Cause</label>
+            <select id="cause" name="cause" required>
+                <option value="scholarship">Scholarship Fund</option>
+                <option value="infrastructure">Infrastructure Development</option>
+                <option value="research">Research & Innovation</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message (Optional)</label>
+            <textarea id="message" name="message" placeholder="Write a message"></textarea>
+
+            <button type="submit">Donate Now</button>
+        </form>
+    </div>
+</body>
+</html>
+
